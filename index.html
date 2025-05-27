@@ -101,6 +101,38 @@
             <span class="text-gray-600">+2,500 estudiantes</span>
           </div>
         </div>
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="award" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">Certificación incluida</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="star" class="h-6 w-6 text-yellow-500"></i>
+            <span class="text-gray-600">4.9/5 valoración</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="users" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">+2,500 estudiantes</span>
+          </div>
+        </div>
+        <div
+          class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="award" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">Certificación incluida</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="star" class="h-6 w-6 text-yellow-500"></i>
+            <span class="text-gray-600">4.9/5 valoración</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="users" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">+2,500 estudiantes</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -152,8 +184,9 @@
               </div>
               <button
                 class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+                data-curso-id="0"
               >
-                Inscribirse Ahora
+                Ver Más
               </button>
             </div>
           </div>
@@ -193,8 +226,9 @@
               </div>
               <button
                 class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+                data-curso-id="1"
               >
-                Inscribirse Ahora
+                Ver Más
               </button>
             </div>
           </div>
@@ -234,8 +268,9 @@
               </div>
               <button
                 class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+                data-curso-id="2"
               >
-                Inscribirse Ahora
+                Ver Más
               </button>
             </div>
           </div>
@@ -515,6 +550,81 @@
           document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
           })
+        })
+      })
+    </script>
+
+    <!-- Modal -->
+    <div
+      id="cursoModal"
+      class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden"
+    >
+      <div class="bg-white w-full max-w-lg rounded-lg shadow-lg p-6 relative">
+        <button
+          id="cerrarModal"
+          class="absolute top-2 right-2 text-gray-600 hover:text-black"
+        >
+          ✕
+        </button>
+        <div id="modalContenido">
+          <!-- El contenido del curso irá acá -->
+        </div>
+      </div>
+    </div>
+    <script>
+      const modal = document.getElementById('cursoModal')
+      const cerrar = document.getElementById('cerrarModal')
+      const contenido = document.getElementById('modalContenido')
+
+      const cursos = [
+        {
+          titulo: 'Kombucha Artesanal',
+          descripcion:
+            'Aprende a preparar kombucha casera con sabores únicos y propiedades probióticas.',
+          duracion: '6 horas',
+          estudiantes: '850',
+          precio: '$89',
+          categoria: 'Bestseller',
+        },
+        {
+          titulo: 'Kéfir de Agua y Leche',
+          descripcion:
+            'Domina la técnica del kéfir y sus increíbles beneficios para la salud digestiva.',
+          duracion: '4 horas',
+          estudiantes: '430',
+          precio: '$75',
+          categoria: 'Nuevo',
+        },
+        // Podés seguir agregando cursos...
+      ]
+
+      function mostrarModal(index) {
+        const curso = cursos[index]
+        contenido.innerHTML = `
+      <h2 class="text-2xl font-bold mb-2">${curso.titulo}</h2>
+      <p class="mb-4 text-gray-700">${curso.descripcion}</p>
+      <ul class="mb-4 text-gray-600 text-sm space-y-1">
+        <li>🕒 Duración: ${curso.duracion}</li>
+        <li>👥 Estudiantes: ${curso.estudiantes}</li>
+        <li>💸 Precio: ${curso.precio}</li>
+        <li>🏷️ Categoría: ${curso.categoria}</li>
+      </ul>
+      <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Inscribirse Ahora
+      </button>
+    `
+        modal.classList.remove('hidden')
+      }
+
+      cerrar.addEventListener('click', () => {
+        modal.classList.add('hidden')
+      })
+
+      // Agregar eventos a los botones de curso
+      document.querySelectorAll('[data-curso-id]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const index = btn.getAttribute('data-curso-id')
+          mostrarModal(index)
         })
       })
     </script>
