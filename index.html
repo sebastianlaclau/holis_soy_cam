@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FermentoMaster - Academia de Fermentación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(to bottom, #f0fdf4, #ffffff);
+      }
+      .hover-shadow:hover {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="gradient-bg">
+    <!-- Header -->
+    <header class="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <i data-lucide="leaf" class="h-8 w-8 text-green-600"></i>
+          <span class="text-2xl font-bold text-green-800">FermentoMaster</span>
+        </div>
+        <nav class="hidden md:flex space-x-6">
+          <a
+            href="#cursos"
+            class="text-gray-600 hover:text-green-600 transition-colors"
+            >Cursos</a
+          >
+          <a
+            href="#beneficios"
+            class="text-gray-600 hover:text-green-600 transition-colors"
+            >Beneficios</a
+          >
+          <a
+            href="#testimonios"
+            class="text-gray-600 hover:text-green-600 transition-colors"
+            >Testimonios</a
+          >
+          <a
+            href="#contacto"
+            class="text-gray-600 hover:text-green-600 transition-colors"
+            >Contacto</a
+          >
+        </nav>
+        <button
+          class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md transition-colors"
+        >
+          Comenzar Ahora
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-4">
+      <div class="container mx-auto text-center">
+        <div
+          class="mb-4 inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+        >
+          🧪 Aprende el Arte de la Fermentación
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          Domina los Secretos de los
+          <span class="text-green-600 block">Fermentos Naturales</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Descubre el fascinante mundo de la fermentación con nuestros cursos
+          especializados. Aprende a crear kombucha, kéfir, masa madre y mucho
+          más desde la comodidad de tu hogar.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-3 rounded-md transition-colors flex items-center justify-center"
+          >
+            <i data-lucide="book-open" class="mr-2 h-5 w-5"></i>
+            Ver Cursos Disponibles
+          </button>
+          <button
+            class="border border-gray-300 hover:bg-gray-50 text-lg px-8 py-3 rounded-md transition-colors"
+          >
+            Clase Gratuita
+          </button>
+        </div>
+        <div
+          class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+        >
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="award" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">Certificación incluida</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="star" class="h-6 w-6 text-yellow-500"></i>
+            <span class="text-gray-600">4.9/5 valoración</span>
+          </div>
+          <div class="flex items-center justify-center space-x-2">
+            <i data-lucide="users" class="h-6 w-6 text-green-600"></i>
+            <span class="text-gray-600">+2,500 estudiantes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cursos Destacados -->
+    <section id="cursos" class="py-20 px-4 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Nuestros Cursos Más Populares
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Desde principiante hasta experto, tenemos el curso perfecto para tu
+            nivel
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Curso 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md hover-shadow transition-all border"
+          >
+            <div class="p-6">
+              <div
+                class="w-full h-48 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <i data-lucide="chef-hat" class="h-16 w-16 text-orange-600"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Kombucha Artesanal</h3>
+              <p class="text-gray-600 mb-4">
+                Aprende a preparar kombucha casera con sabores únicos y
+                propiedades probióticas
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-green-600">$89</span>
+                <span
+                  class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm"
+                  >Bestseller</span
+                >
+              </div>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-4"
+              >
+                <div class="flex items-center">
+                  <i data-lucide="clock" class="h-4 w-4 mr-1"></i>6 horas
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="users" class="h-4 w-4 mr-1"></i>850
+                  estudiantes
+                </div>
+              </div>
+              <button
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+              >
+                Inscribirse Ahora
+              </button>
+            </div>
+          </div>
+
+          <!-- Curso 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md hover-shadow transition-all border"
+          >
+            <div class="p-6">
+              <div
+                class="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <i data-lucide="heart" class="h-16 w-16 text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Kéfir de Agua y Leche</h3>
+              <p class="text-gray-600 mb-4">
+                Domina la técnica del kéfir y sus increíbles beneficios para la
+                salud digestiva
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-green-600">$75</span>
+                <span
+                  class="border border-gray-300 text-gray-600 px-2 py-1 rounded text-sm"
+                  >Nuevo</span
+                >
+              </div>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-4"
+              >
+                <div class="flex items-center">
+                  <i data-lucide="clock" class="h-4 w-4 mr-1"></i>4 horas
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="users" class="h-4 w-4 mr-1"></i>320
+                  estudiantes
+                </div>
+              </div>
+              <button
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+              >
+                Inscribirse Ahora
+              </button>
+            </div>
+          </div>
+
+          <!-- Curso 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md hover-shadow transition-all border"
+          >
+            <div class="p-6">
+              <div
+                class="w-full h-48 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-lg mb-4 flex items-center justify-center"
+              >
+                <i data-lucide="leaf" class="h-16 w-16 text-yellow-600"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2">Masa Madre Perfecta</h3>
+              <p class="text-gray-600 mb-4">
+                Crea y mantén tu propia masa madre para panes artesanales
+                irresistibles
+              </p>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-2xl font-bold text-green-600">$95</span>
+                <span
+                  class="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm"
+                  >Popular</span
+                >
+              </div>
+              <div
+                class="flex items-center space-x-4 text-sm text-gray-600 mb-4"
+              >
+                <div class="flex items-center">
+                  <i data-lucide="clock" class="h-4 w-4 mr-1"></i>8 horas
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="users" class="h-4 w-4 mr-1"></i>1,200
+                  estudiantes
+                </div>
+              </div>
+              <button
+                class="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-md transition-colors"
+              >
+                Inscribirse Ahora
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section id="beneficios" class="py-20 px-4 bg-green-50">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            ¿Por Qué Elegir FermentoMaster?
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Más que cursos, una experiencia completa de aprendizaje
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="book-open" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Contenido Experto</h3>
+            <p class="text-gray-600">
+              Cursos desarrollados por especialistas en fermentación con años de
+              experiencia
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="users" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Comunidad Activa</h3>
+            <p class="text-gray-600">
+              Únete a nuestra comunidad de fermentadores y comparte experiencias
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="award" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Certificación</h3>
+            <p class="text-gray-600">
+              Obtén certificados oficiales al completar nuestros cursos
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="heart" class="h-8 w-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Soporte 24/7</h3>
+            <p class="text-gray-600">
+              Asistencia personalizada cuando la necesites
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="py-20 px-4 bg-white">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Lo Que Dicen Nuestros Estudiantes
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Increíble curso de kombucha. Ahora hago mi propia kombucha en
+              casa y es deliciosa. Los instructores son muy claros y el material
+              excelente."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-green-600 font-semibold">M</span>
+              </div>
+              <div>
+                <p class="font-semibold">María González</p>
+                <p class="text-sm text-gray-500">Estudiante de Kombucha</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "El curso de masa madre cambió mi forma de hacer pan. Ahora
+              entiendo todo el proceso y mis panes son espectaculares."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-green-600 font-semibold">C</span>
+              </div>
+              <div>
+                <p class="font-semibold">Carlos Ruiz</p>
+                <p class="text-sm text-gray-500">Estudiante de Masa Madre</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md border p-6">
+            <div class="flex items-center mb-4">
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+              <i
+                data-lucide="star"
+                class="h-5 w-5 text-yellow-500 fill-current"
+              ></i>
+            </div>
+            <p class="text-gray-600 mb-4">
+              "Excelente plataforma y contenido de calidad. He aprendido mucho
+              sobre fermentación y ahora es mi pasión."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3"
+              >
+                <span class="text-green-600 font-semibold">A</span>
+              </div>
+              <div>
+                <p class="font-semibold">Ana López</p>
+                <p class="text-sm text-gray-500">Estudiante de Kéfir</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 px-4 bg-green-600">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold text-white mb-4">
+          ¿Listo para Comenzar tu Viaje en la Fermentación?
+        </h2>
+        <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          Únete a miles de estudiantes que ya están creando sus propios
+          fermentos caseros
+        </p>
+        <button
+          class="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-3 rounded-md transition-colors"
+        >
+          Comenzar Ahora - Clase Gratuita
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-gray-900 text-white py-12 px-4">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <i data-lucide="leaf" class="h-8 w-8 text-green-400"></i>
+              <span class="text-2xl font-bold">FermentoMaster</span>
+            </div>
+            <p class="text-gray-400">
+              Tu academia online especializada en el arte de la fermentación
+              natural.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Cursos</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>Kombucha Artesanal</li>
+              <li>Kéfir de Agua y Leche</li>
+              <li>Masa Madre</li>
+              <li>Fermentos Vegetales</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Soporte</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>Centro de Ayuda</li>
+              <li>Comunidad</li>
+              <li>Contacto</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>info@fermentomaster.com</li>
+              <li>+1 (555) 123-4567</li>
+              <li>Síguenos en redes sociales</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2024 FermentoMaster. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Inicializar iconos de Lucide
+      lucide.createIcons()
+
+      // Smooth scroll para los enlaces de navegación
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault()
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          })
+        })
+      })
+    </script>
+  </body>
+</html>
